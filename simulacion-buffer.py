@@ -18,8 +18,8 @@ class Nodo:
     
     def procesar_buffer(self, nodo, mensaje):
         if nodo in self.conexiones:
-            #simula una probabilidad del 30% de perdida del paquete
             if random.random() < 0.3:
+                #simula una probabilidad del 30% de perdida del paquete
                 print(f"Paquete perdido de {self.nombre} a {nodo.nombre}")
                 time.sleep(1)
             else:
